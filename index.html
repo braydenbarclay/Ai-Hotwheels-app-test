@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b0b0d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Hot Wheels"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"><title>Hot Wheels Collection</title></head>
+<body>
+<header class="top"><div><span>MY COLLECTION</span><h1>Hot Wheels</h1></div><button id="settings" class="round">⚙</button></header>
+<main>
+<section class="hero"><div><small>Cars in collection</small><b id="count">0</b></div><button id="scanTop">📷 Scan Car</button></section>
+<div class="search"><span>⌕</span><input id="search" placeholder="Search cars, series, year..."></div>
+<div class="row"><h2>My Collection</h2><button id="sort">Newest</button></div>
+<section id="grid" class="grid"></section>
+<section id="empty" class="empty"><div>🏎️</div><h3>No cars yet</h3><p>Scan the front of a Hot Wheels package to start your collection.</p><button id="scanEmpty">Scan your first car</button></section>
+</main>
+<nav><button class="active">▦<small>Collection</small></button><button id="scanNav">＋<small>Add Car</small></button></nav>
+<div id="scanner" class="sheet hidden"><div class="panel"><div class="sheethead"><div><span>ADD TO COLLECTION</span><h2>Scan Hot Wheels</h2></div><button class="round close">×</button></div><div class="camera"><video id="video" autoplay playsinline></video><div class="frame"></div><p id="camMsg">Point at the front of the package</p></div><div class="cameraBtns"><button id="capture" class="shutter">●</button><label class="secondary">Choose Photo<input id="file" type="file" accept="image/*" capture="environment" hidden></label></div><canvas id="canvas" hidden></canvas></div></div>
+<div id="review" class="sheet hidden"><div class="panel"><div class="sheethead"><div><span>REVIEW</span><h2>Add Car</h2></div><button class="round close">×</button></div><img id="preview" class="preview"><div class="status">AI identification is ready to connect. You can enter or correct the details below.</div><label>Car name<input id="name" placeholder="e.g. '69 Camaro"></label><label>Series<input id="series" placeholder="e.g. HW Muscle Mania"></label><div class="cols"><label>Year<input id="year" inputmode="numeric"></label><label>Collection #<input id="number" placeholder="123/250"></label></div><label>Notes<textarea id="notes" placeholder="Variant, packaging differences, where you found it..."></textarea></label><button id="save" class="wide">Add to Collection</button></div></div>
+<div id="detail" class="sheet hidden"><div class="panel"><div class="sheethead"><div><span>COLLECTION</span><h2 id="dname"></h2></div><button class="round close">×</button></div><img id="dphoto" class="detailPhoto"><p id="dmeta" class="muted"></p><p id="dnotes"></p><button id="remove" class="danger wide">Remove from Collection</button></div></div>
+<div id="toast"></div><script src="app.js"></script></body></html>
